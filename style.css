@@ -42,3 +42,6 @@ h2{font-size:26px;margin:0 0 8px;color:#7a3f1d;text-align:center}
 .glow{animation:glow 1s infinite}@keyframes glow{50%{box-shadow:0 0 0 8px #f1c75a}}
 .hearts{font-size:60px;text-align:center;animation:pulse 1s infinite}
 .dev{position:fixed;left:10px;right:10px;bottom:60px;z-index:90}
+.bar{height:8px;background:#e3c999;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:#a9542f;transition:width .4s}
+.nb{display:flex;flex-direction:column;gap:8px}.nbi{display:flex;gap:10px;align-items:flex-start;font-size:19px;border-bottom:1px dashed #e0c79c;padding-bottom:6px}.nbi span{font-size:22px}
+.hook{background:#fbefd6;border:2px solid #d8b884}

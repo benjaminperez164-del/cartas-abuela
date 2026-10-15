@@ -1,5 +1,5 @@
 // Service worker de Cartas de la Abuela
-const V='1';const CACHE='cartas-abuela-v'+V;
+const V='2';const CACHE='cartas-abuela-v'+V;
 const ASSETS=['./','./index.html','./style.css?v='+V,'./game.js?v='+V,'./story.js?v='+V,'./manifest.webmanifest?v='+V,'./icons/icon-192.png','./icons/icon-512.png','./icons/icon-maskable-512.png','./icons/apple-touch-icon.png','./icons/favicon.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>Promise.all(ASSETS.map(a=>c.add(a).catch(()=>{})))).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('cartas-abuela-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
